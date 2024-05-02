@@ -6,9 +6,12 @@
   <% @articles.each do |article| %>
     <%= render article %>
     <p>
-      <%= link_to "Show this article", article %>
+      <%= link_to "Show", article %>
+      <%= link_to "Edit", edit_article_path(article) %> |
+      <%= link_to "Destroy", article, method: :delete %>
     </p>
   <% end %>
 </div>
 
 <%= link_to "New article", new_article_path %>
+<%= link_to "Back to homepage", root_path %>
